@@ -1,11 +1,8 @@
 import { FaPlus } from "react-icons/fa";
 import "./CreateTodoButton.css";
-import { TodoContext } from "../TodoContext";
 import React from "react";
 
-function CreateTodoButton() {
-  const { setOpenModal } = React.useContext(TodoContext);
-
+function CreateTodoButton({ setOpenModal }) {
   const toggleOpenModal = () => {
     setOpenModal((prevState) => !prevState); // Alterna el valor actual del estado
   };
